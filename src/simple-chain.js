@@ -34,8 +34,7 @@ const chainMaker = {
     return this.str.join('~~')
   }
 };
-console.log(null === undefined)
-console.log(chainMaker.addLink('GHI').addLink(null).reverseChain().addLink(333).reverseChain().reverseChain().addLink(0).reverseChain().reverseChain().addLink('GHI').finishChain())
+
 module.exports = {
   chainMaker
 };

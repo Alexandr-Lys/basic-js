@@ -36,10 +36,6 @@ function transform(arr) {
         if(arr[i-2]!=='--discard-next'){
           if(i!==0){
             arr[i] = arr[i-1];}else{continue;}
-
-          // }else{
-          //   arr[i] = arr[arr.length-1]
-          // }
         }else{
           continue;
         } 

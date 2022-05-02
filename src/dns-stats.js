@@ -35,10 +35,10 @@ function getDNSStats(domains) {
     }
     
   }
-  console.log(domains[0])
   return result
 }
-console.log(getDNSStats(['epam.com', 'info.epam.com']))
+
+
 module.exports = {
   getDNSStats
 };
