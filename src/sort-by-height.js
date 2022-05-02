@@ -19,8 +19,6 @@ function sortByHeight(arr) {
   for (let i = 1; i < arr.length; i++) {
       if (arr[i] < p) a.push(arr[i]);
       else b.push(arr[i]);
-
-    
   }
   return sortByHeight(a).concat(p, sortByHeight(b));
 }

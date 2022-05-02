@@ -21,11 +21,9 @@ function encodeLine(str) {
       i--
     }   
   }
-  console.log(str)
   return str.join('')
   
 }
-console.log(encodeLine('abbcca'))
 module.exports = {
   encodeLine
 };
