@@ -92,7 +92,6 @@ class VigenereCipheringMachine {
       }else{
         return result
       }
-      
     } else {
       throw new Error('Incorrect arguments!');
     }
