@@ -35,7 +35,9 @@ function transform(arr) {
       }else if(arr[i] === '--double-prev'){
         if(arr[i-2]!=='--discard-next'){
           if(i!==0){
-            arr[i] = arr[i-1];}else{continue;}
+            result.push(arr[i-1]);
+            continue;
+          }else{continue;}
         }else{
           continue;
         } 
