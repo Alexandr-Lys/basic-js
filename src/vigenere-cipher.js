@@ -25,9 +25,7 @@ class VigenereCipheringMachine {
     this.abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
   }
   encrypt(message, key) {
-    if (!message || !key) {
-      throw new NotImplementedError('Incorrect arguments!');
-    } else {
+    if (typeof message === 'string' && typeof key === 'string') {
       message = message.toUpperCase().split('');
       key = key.toUpperCase().split('');
       let result = '';
@@ -57,14 +55,13 @@ class VigenereCipheringMachine {
       }else{
         return result
       }
-      
+    } else {
+      throw new Error('Incorrect arguments!');
     }
   }
 
   decrypt(message, key) {
-    if (!message || !key) {
-      throw new NotImplementedError('Incorrect arguments!');
-    } else {
+    if (typeof message === 'string' && typeof key === 'string') {
       message = message.split('');
       key = key.toUpperCase().split('');
       let result = '';
@@ -95,11 +92,13 @@ class VigenereCipheringMachine {
       }else{
         return result
       }
+      
+    } else {
+      throw new Error('Incorrect arguments!');
     }
   }
 }
-const directMachine = new VigenereCipheringMachine(false);
-console.log(directMachine.decrypt('AEIHQX SX DLLU!', 'alphonse'))
+
 
 module.exports = {
   VigenereCipheringMachine

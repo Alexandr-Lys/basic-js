@@ -20,7 +20,7 @@ const chainMaker = {
   removeLink(position) {
     position -= 1
     if(!position || this.str.length >= position || position < this.str.length || !Number.isInteger(position)){
-      throw new NotImplementedError('You can\'t remove incorrect link!');
+      throw new Error('You can\'t remove incorrect link!');
     }
     this.str.splice(position, 1)
     return this
