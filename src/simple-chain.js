@@ -11,7 +11,7 @@ const chainMaker = {
   },
   addLink(value) {
       if(value!=undefined || value === null){
-        this.str.push(`(${value})`)
+        this.str.push(`( ${value} )`)
       }else{
         this.str.push('( )')
       }
